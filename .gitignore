@@ -1,0 +1,21 @@
+# Ignore node_modules (standard)
+node_modules/
+
+# build files TypeScript
+dist/
+*.js
+*.js.map
+
+# Cypress config and temporary files
+cypress/screenshots/
+cypress/videos/
+cypress.env.json
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# environment files
+.env
+.env.*
