@@ -20,4 +20,4 @@ describe('Complete Purchase Flow', () => {
         cy.get('[data-test="back-to-products"]').click();
         cy.url().should('include', '/inventory.html');
     });
-});
+}); 
