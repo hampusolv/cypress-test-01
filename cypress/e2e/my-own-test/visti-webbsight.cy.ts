@@ -19,6 +19,14 @@ describe('Login functionality', () => {
         cy.get('[data-test="login-button"]').click();
         cy.get('[data-test="error"]').contains('Epic sadface: Username and password do not match any user in this service').should('be.visible');
     });
+    it('should not log in with empty credentials', () => {
+        cy.visit('https://www.saucedemo.com/');
+        cy.get('[data-test="username"]').clear();
+        cy.get('[data-test="password"]').clear();
+        cy.get('[data-test="login-button"]').click();
+        cy.get('[data-test="error"]').contains('Epic sadface: Username is required').should('be.visible');
+    });
+
 
 });
 
